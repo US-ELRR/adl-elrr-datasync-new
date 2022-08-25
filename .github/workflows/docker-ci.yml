@@ -31,9 +31,8 @@ jobs:
     - name: Docker build
       run: |
        echo "Start docker build"
-       #docker build . -t openlxp/elrr-datasync
-       docker build --build-arg JAR_FILE="./target/elrrdatasync-0.0.1-SNAPSHOT.jar" --file Dockerfile -t openlxp/elrr-datasync .
+       docker build --build-arg JAR_FILE="./target/elrrdatasync-0.0.1-SNAPSHOT.jar" --file Dockerfile -t openlxp/adl-elrr-datasync .
     - name: Push Image
       run: |
        echo "Push new image to the Dockerhub repository"
-       docker push openlxp/elrr-datasync
+       docker push openlxp/adl-elrr-datasync
